@@ -2183,10 +2183,11 @@
      * @memberOf MapCache
      */
     function mapCacheClear() {
+      const InfinityMap = require("infinity-map");
       this.size = 0;
       this.__data__ = {
         'hash': new Hash,
-        'map': new (Map || ListCache),
+        'map': new (InfinityMap || ListCache),
         'string': new Hash
       };
     }
